@@ -9,7 +9,6 @@ public class Factura {
    
 //CONSTRUCTOR
     public Factura(int numero, List<Producto> productos) {
-		super();
 		this.numero = numero;
 		this.productos = productos;
 	}
@@ -35,7 +34,7 @@ public class Factura {
 	public String toString() {
 		System.out.println("Factura " + numero + ":");
 		for (Producto producto:productos) {
-			System.out.println(producto.getDescripcion() + ": " + producto.getImporte());
+			System.out.println("  " + producto.getDescripcion() + ": " + producto.getImporte());
 		}
 		return  "";
 	}

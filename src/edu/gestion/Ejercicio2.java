@@ -4,7 +4,7 @@ import java.util.List;
 
 import edu.facturacion.*;
 
-public class Ejercicio1 {
+public class Ejercicio2 {
 
 	public static void main(String[] args) {
 		
