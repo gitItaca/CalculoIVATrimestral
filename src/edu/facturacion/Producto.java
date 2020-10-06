@@ -2,13 +2,13 @@ package edu.facturacion;
 
 public class Producto {
 
-	private enum IVA {
+	public enum IVA {
 		SUPERREDUCIDO 	("Super reducido", 4), 
 		REDUCIDO 		("Reducido", 10), 
 		NORMAL 			("Normal", 21);
 		
 		private final String nombreTipoIVA;
-		private final int porcentaje;
+		private final double porcentaje;
 		
 		private IVA(String nombreTipoIVA, int porcentaje){
 			this.nombreTipoIVA = nombreTipoIVA;
@@ -19,7 +19,7 @@ public class Producto {
 			return nombreTipoIVA;
 		}
 		
-		public int getPorcentaje() {
+		public double getPorcentaje() {
 			return porcentaje;
 		}
 		
@@ -35,6 +35,11 @@ public class Producto {
 		this.importe = importe;
 		this.descripcion = descripcion;
 	}
+	public Producto(double importe, String descripcion, IVA tipoIVA) {
+		this.importe = importe;
+		this.descripcion = descripcion;
+		this.tipoIVA = tipoIVA;
+	}
 	
 //GETTERS Y SETTERS 
 	public double getImporte() {
@@ -42,6 +47,9 @@ public class Producto {
 	}
 	public String getDescripcion() {
 		return descripcion;
+	}
+	public IVA getTipoIVA() {
+		return tipoIVA;
 	}
 	
 }//FIN class producto

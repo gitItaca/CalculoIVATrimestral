@@ -8,13 +8,13 @@ public class Ejercicio2 {
 
 	public static void main(String[] args) {
 		
-		Producto leche = new Producto(0.75, "leche");
-		Producto pan = new Producto(0.5, "pan");
-		Producto salmon = new Producto(8.99, "salmon");
-		Producto aguacates = new Producto(2.95, "aguacates");
-		Producto friegasuelos = new Producto(2.95, "friegasuelos");
-		Producto cerveza = new Producto(2.95, "cerveza");
-		Producto sandia = new Producto(2.95, "sandia");
+		Producto leche = new Producto(0.75, "leche", Producto.IVA.SUPERREDUCIDO);
+		Producto pan = new Producto(0.5, "pan", Producto.IVA.SUPERREDUCIDO);
+		Producto salmon = new Producto(8.99, "salmon", Producto.IVA.NORMAL);
+		Producto aguacates = new Producto(2.95, "aguacates", Producto.IVA.NORMAL);
+		Producto friegasuelos = new Producto(2.95, "friegasuelos", Producto.IVA.REDUCIDO);
+		Producto cerveza = new Producto(2.95, "cerveza", Producto.IVA.NORMAL);
+		Producto sandia = new Producto(2.95, "sandia", Producto.IVA.REDUCIDO);
 		
 		List<Producto> productos = new ArrayList<Producto>();
 		productos.add(leche);
@@ -27,7 +27,9 @@ public class Ejercicio2 {
 		
 		Factura comida = new Factura(1, productos);
 		
-		System.out.print(comida);
+		System.out.println("El total de la factura es de " + UtilidadesFactura.calcularImporteFactura(comida) + "€");
+		System.out.println("El total del IVA es de " + UtilidadesFactura.calcularIVAFactura(comida) + "€");
+		System.out.println("El importe total de la factura es de " + UtilidadesFactura.calcularImporteFacturaConIVA(comida) + "€");
 		
 
 	}//FIN MAIN
