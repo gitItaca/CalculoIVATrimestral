@@ -59,7 +59,7 @@ public class UtilidadesFactura {
 		total = calcularImporteFactura(f) + calcularIVAFactura(f);
 		
 		return total;
-	}
+	}//FIN calcularImporteFacturaConIVA
 	
 
 }//FIN UtilidadesFactura
