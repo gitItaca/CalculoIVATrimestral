@@ -26,9 +26,7 @@ public class Ejercicio3 {
 		productos.add(friegasuelos);
 		productos.add(cerveza);
 		productos.add(sandia);
-		
-		
-		
+						
 		List<Factura> facturas = new ArrayList<Factura>();
 		Random ale = new Random();
 		
@@ -43,7 +41,7 @@ public class Ejercicio3 {
 			facturas.add(comida);
 		}
 		
-		//creo las fechas y las asigno
+		//creo las fechas y las asigno a las facturas
 		Calendar fechaActual = new GregorianCalendar();		
 		Calendar fecha1 = new GregorianCalendar();
 		fecha1.set(2020, 9, 02);
@@ -59,14 +57,25 @@ public class Ejercicio3 {
 		facturas.get(2).setFecha(fecha2);
 		facturas.get(3).setFecha(fecha3);
 		facturas.get(4).setFecha(fecha4);
-		//fechaActual.add(Calendar.DAY_OF_MONTH, +3);
 		
-		//System.out.println(fechaActual.get(Calendar.DAY_OF_MONTH) + "/" + fechaActual.get(Calendar.MONTH));
-		System.out.println(facturas.get(0).toString());
-		System.out.println(facturas.get(1).toString());
-		System.out.println(facturas.get(2).toString());
-		System.out.println(facturas.get(3).toString());
-		System.out.println(facturas.get(4).toString());
+		//Imprimo las facturas
+		System.out.print(facturas.get(0).toString());
+		System.out.printf("El IVA es de: %.2f € \n", UtilidadesFactura.calcularIVAFactura(facturas.get(0)));
+		System.out.println();
+		System.out.print(facturas.get(1).toString());
+		System.out.printf("El IVA es de: %.2f € \n", UtilidadesFactura.calcularIVAFactura(facturas.get(1)));		
+		System.out.println();
+		System.out.print(facturas.get(2).toString());
+		System.out.printf("El IVA es de: %.2f € \n", UtilidadesFactura.calcularIVAFactura(facturas.get(2)));
+		System.out.println();
+		System.out.print(facturas.get(3).toString());
+		System.out.printf("El IVA es de: %.2f € \n", UtilidadesFactura.calcularIVAFactura(facturas.get(3)));		
+		System.out.println();
+		System.out.print(facturas.get(4).toString());
+		System.out.printf("El IVA es de: %.2f € \n", UtilidadesFactura.calcularIVAFactura(facturas.get(4)));
+		System.out.println("__________________________________________________________________________________________________________________");
+		System.out.printf("El IVA total de todas las facturas de este trimestre es de:  %.2f € \n", UtilidadesCalculoIVA.calculoIVATrimestral(facturas));
+		System.out.printf("El IVA de todas las facturas de este mes es de:  %.2f € \n", UtilidadesCalculoIVA.calculoIVAMesActual(facturas));
 		
 	}//FIN MAIN
 
