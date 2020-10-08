@@ -3,8 +3,6 @@ package edu.facturacion;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.facturacion.Producto.IVA;
-
 public class UtilidadesFactura {
 	
 	private Factura f;
